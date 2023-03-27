@@ -1,0 +1,122 @@
+/*1- Insira pelo menos 10 registros completos nas tabelas CLIENTE, FORNECEDOR, PRODUTO, VENDEDOR, VENDA E VENDA_PRODUTO*/
+
+INSERT into cliente(nome, telefone, email) values
+ ('Adryan','13987654251', 'adryan123@gmail.com'),
+ ('Bruno','139873434351', 'bruno123@gmail.com'),
+ ('heitor','2347654251', 'heitor@gmail.com'),
+ ('gabriel','1398324361', 'gabriel@gmail.com'),
+ ('paulo','1398322151', 'paulo123@gmail.com'),
+ ('lucas','98727654251', 'lucas@gmail.com'),
+ ('breno','13987654251', 'breno@gmail.com'),
+ ('iasmin','12313454251', 'iasminmenamorapfv@gmail.com'),
+ ('kaua','121312654251', 'semnamoradinha@gmail.com'),
+ ('lica','23424654251', 'lica@gmail.com');
+
+select * from cliente;
+
+insert into fornecedor (cnpj,nome) value
+('2613572164721','igor'),
+('3281738921421','nathan'),
+('656456465646','iasmin'),
+('2612164646721','bruno'),
+('7875354554535','kaua'),
+('245711657677','monark'),
+('535252567611','pedro'),
+('545345352125','xandao'),
+('010901015155','muzzy'),
+('532526779000','cariani');
+
+
+insert into vendedor (nome) values 
+('pedro'),
+('marcos'),
+('lucas'),
+('joão'),
+('kaka'),
+('felipe neto'),
+('orochi'),
+('luigi'),
+('caumo'),
+('kaua');
+
+
+insert into produto (nome,preco,qtd_estoque) values
+('massageador', '20.00','10'),
+('urso', '90.00','110'),
+('louça', '50.00','101'),
+('pcgamer', '9.99','1110'),
+('gabinete', '75.00','160'),
+('blusa', '60.00','210'),
+('calça', '202.00','1310'),
+('shape', '200.00','1'),
+('rodas', '90.00','40'),
+('parafuso', '10.00','70');
+
+insert INTO venda (id,valor_total,data) VALUES 
+(null,50.00,time(now())),
+(null,2.00,time(now())),
+(null,530.00,time(now())),
+(null,40.00,time(now())),
+(null,90.00,time(now())),
+(null,10.00,time(now())),
+(null,5230.00,time(now())),
+(null,53.00,time(now())),
+(null,53.00,time(now())),
+(null,12.00,time(now()));
+
+
+/*2-Insira pelo menos 5 registros nas tabelas CATEGORIA E PAGAMENTO*/
+
+insert into categoria (nome) values ('douglas');
+insert into categoria (nome) values ('igorX');
+insert into categoria (nome) values ('igao');
+insert into categoria (nome) values ('igor3K');
+insert into categoria (nome) values ('thomasedson');
+
+select * from categoria;
+
+insert into pagamento (nome) values ('pierri');
+insert into pagamento (nome) values ('manoelgomes');
+insert into pagamento (nome) values ('laura');
+insert into pagamento (nome) values ('laurinhaX');
+insert into pagamento (nome) values ('pualo');
+
+
+
+/*3-Altere o nome do cliente de id 5 para Manoel Bandeira*/
+
+update cliente
+set nome="manoel bandeira"
+where id=5;
+
+/* 4-Corrija o preço do produto  de id 2 para 13,50*/
+
+update produto
+set preco="13.50"
+where id=2;
+
+/* 5-Altere o nome da categoria de id 4 para Promocional*/
+
+update categoria
+set nome="promocional"
+where id=4;
+
+/* 6-Altere o nome do pagamento de código 1 para caderneta*/
+
+UPDATE pagamento
+set nome="cardeneta"
+where id=1;
+
+/* 7-Apague o cliente de id 10*/ 
+
+delete from cliente
+where id=10;
+
+select * from cliente;
+
+
+
+
+
+
+
